@@ -4366,7 +4366,7 @@ end
 
 
 spawn(function()
-    while wait(.5) do
+    while wait(.2) do
             if _G.Auto_Farm then
                 if game:GetService("Players").LocalPlayer.PlayerGui.QuestGui.Enabled == true then
                     for _,v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
