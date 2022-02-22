@@ -4367,6 +4367,7 @@ end
 
 spawn(function()
     while wait(.3) do
+        pcall(function()
             if _G.Auto_Farm then
                 if game:GetService("Players").LocalPlayer.PlayerGui.QuestGui.Enabled == true then
                     for _,v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
@@ -4394,6 +4395,7 @@ spawn(function()
             elseif _G.Auto_Farm == false then
                 game.Workspace.CurrentCamera.CameraSubject = game:GetService("Players").LocalPlayer.Character.Humanoid
             end
+        end)
     end
 end)
 spawn(function()
