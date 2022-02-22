@@ -4366,7 +4366,7 @@ end
 
 
 spawn(function()
-    while wait(.2) do
+    while wait(.3) do
             if _G.Auto_Farm then
                 if game:GetService("Players").LocalPlayer.PlayerGui.QuestGui.Enabled == true then
                     for _,v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
@@ -4377,7 +4377,7 @@ spawn(function()
                                         _G.DL = true
                                         game.Workspace.CurrentCamera.CameraSubject = v.Humanoid
                                         repeat game:GetService("RunService").Heartbeat:wait(0.3)
-                                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame*CFrame.new(0,-6.5,0)
+                                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame*CFrame.new(0,-6.2,0)
                                             game:GetService'VirtualUser':CaptureController()
                                             game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
                                         until v.Humanoid.Health <= 0 or _G.Auto_Farm == false
